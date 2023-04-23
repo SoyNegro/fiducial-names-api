@@ -7,4 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface NamesRepository extends JpaRepository<Name,Long> {
     boolean existsByFirstName(String firstName);
+
+    void deleteNameByFirstName(String firstName);
 }
