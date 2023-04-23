@@ -59,4 +59,14 @@ public class NameService {
         );
         return new ResponseEntity<>(new NamesInsertedResponse(insertedNames),HttpStatus.OK);
     }
+    /*
+    * Since Name.firstName are uniques allow to delete a Name given its firstName
+    * @param firstName Name to be deleted
+    * @return firstName if Name was deleted <code> HttpStatus.NOT_FOUND </code> otherwise
+    * */
+    public ResponseEntity<String> deleteName(String firstName){
+        if (!namesRepository.existsByFirstName(firstName)) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        namesRepository.deleteNameByFirstName(firstName);
+        return new ResponseEntity<>(firstName,HttpStatus.OK);
+    }
 }
