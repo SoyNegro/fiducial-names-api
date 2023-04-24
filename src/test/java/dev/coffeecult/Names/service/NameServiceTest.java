@@ -66,6 +66,9 @@ class NameServiceTest {
     }
 
     @Test
-    void deleteName() {
+    void should_return_NotFound_on_name_to_delete_not_existing() {
+        when(namesRepository.existsByFirstName("NoName")).thenReturn(false);
+        nameService.deleteName("NoName");
+        assertEquals(HttpStatus.NOT_FOUND,nameService.deleteName("NoName").getStatusCode());
     }
 }
