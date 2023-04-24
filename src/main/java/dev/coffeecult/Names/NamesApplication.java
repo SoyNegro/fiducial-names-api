@@ -6,11 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class NamesApplication {
-  @Value("${spring.datasource.password}")
-  private static String pass;
 	public static void main(String[] args) {
 		SpringApplication.run(NamesApplication.class, args);
-		System.out.println(pass);
 	}
 
 }
