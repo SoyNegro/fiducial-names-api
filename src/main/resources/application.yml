@@ -3,7 +3,7 @@
       name: Names
     datasource:
       url: ${DB_URL}
-      username: postgres
+      username: ${DB_USER}
       password: ${DB_PASS}
       driverClassName: org.postgresql.Driver
     jpa:
