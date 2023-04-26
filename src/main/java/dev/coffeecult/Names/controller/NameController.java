@@ -68,4 +68,9 @@ public class NameController {
     public ResponseEntity<String> deleteName(@PathVariable("name") final String firstName) {
         return nameService.deleteName(firstName);
     }
+
+    @GetMapping("populate")
+    public ResponseEntity<String> populate(){
+        return nameService.populateDefaultDB();
+    }
 }
