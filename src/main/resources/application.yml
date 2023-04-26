@@ -5,13 +5,9 @@
       url: ${DB_URL}
       username: ${DB_USER}
       password: ${DB_PASS}
-      driverClassName: org.postgresql.Driver
     jpa:
       open-in-view: true
       properties:
         hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-          ddl-auto: validate
-          jdbc:
-            lob:
-              non_contextual_creation: true
+          ddl-auto: update
+
