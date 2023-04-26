@@ -5,21 +5,14 @@ This is a small REST-API with partial CRUD functionalities to manage Names.
 ### About
 This project leverage:
 - Spring Boot 3
-- PostgreSQL
+- MySQL
 - Java 17 
 - Maven
 - Docker
 
-Being `Docker` and `PostgreSQL` the absolute baseline to run the project. Otherwise, all the other components should be available on the running machine.
+Being `Docker` and `MySQL` the absolute baseline to run the project. Otherwise, all the other components should be available on the running machine.
 
-Connection to `PostgreSQL` can be configured through environment variables. And the project expect to find three `DB_URL`, `DB_USER` and `DB_PASS`.
-
-A ready to use version of the project can be found on: 
-[Railway](https://fiducial-names-api-production.up.railway.app/api/names) 
-
-Leveraging [Supabase](https://supabase.com/) as managed provider for `PostgreSQL`.
-
-This version database have been already populated with default values.
+Connection to `MySQL` can be configured through environment variables. And the project expect to find three `DB_URL`, `DB_USER` and `DB_PASS`.
 
 ### Endpoints
 List of available endpoints (Pointing to [Railway](https://fiducial-names-api-production.up.railway.app/api/names)):
