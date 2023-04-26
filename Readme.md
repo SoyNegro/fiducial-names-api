@@ -1,6 +1,6 @@
 # Names-API
 
-This is a small REST-API with CRUD functionalities to manage Names.
+This is a small REST-API with partial CRUD functionalities to manage Names.
 
 ### About
 This project leverage:
@@ -19,6 +19,8 @@ A ready to use version of the project can be found on:
 
 Leveraging [Supabase](https://supabase.com/) as managed provider for `PostgreSQL`.
 
+This version database have been already populated with default values.
+
 ### Endpoints
 List of available endpoints (Pointing to [Railway](https://fiducial-names-api-production.up.railway.app/api/names)):
 - `GET` [/api/names](https://fiducial-names-api-production.up.railway.app/api/names) 
@@ -34,10 +36,15 @@ List of available endpoints (Pointing to [Railway](https://fiducial-names-api-pr
       - name: `String`
 
 
+- `GET` [/api/populate](https://fiducial-names-api-production.up.railway.app/api/populate)
+  - `Response`
+    - String indicating whether database was populated or not. Will only populated an empty database.
+
+
 -  `POST` [/api/names](https://fiducial-names-api-production.up.railway.app/api/names)
-  - `Parameters`
-    - `Body`
-      - Set of Strings
+   - `Parameters`
+     - `Body`
+       - Set of Strings
 
 
 - `DELETE` [/api/{name}](https://fiducial-names-api-production.up.railway.app/api/name)
